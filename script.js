@@ -17,7 +17,9 @@ function sendtelegram(message) {
 }
 
 function send() {
-    let username = document.getElementById("username").value;
-    let age = document.getElementById("age").value;
-  sendtelegram(`Ismi: ${username} va Yoshi: ${age}`);
+  let username = document.getElementById("username");
+  let age = document.getElementById("age");
+  sendtelegram(`Ismi: ${username.value} va Yoshi: ${age.value}`);
+  username.value = "";
+  age.value = "";
 }
